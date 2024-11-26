@@ -36,7 +36,7 @@ fun EntertainmentScreen() {
                 colors = CardDefaults.cardColors(containerColor = Color.Black)
             ) {
                 Text(
-                    text = "Bienvenido a la vista Entertainment",
+                    text = "Bienvenido a Entertainment",
                     modifier = Modifier.padding(24.dp),
                     color = Color.White,
                     style = MaterialTheme.typography.headlineMedium

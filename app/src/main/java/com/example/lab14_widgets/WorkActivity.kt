@@ -36,7 +36,7 @@ fun WorkScreen() {
                 colors = CardDefaults.cardColors(containerColor = Color.Blue)
             ) {
                 Text(
-                    text = "Bienvenido a la vista Work",
+                    text = "Bienvenido a Work",
                     modifier = Modifier.padding(24.dp),
                     color = Color.White,
                     style = MaterialTheme.typography.headlineMedium
