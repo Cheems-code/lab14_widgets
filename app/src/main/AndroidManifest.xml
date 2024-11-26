@@ -23,6 +23,9 @@
             </intent-filter>
         </activity>
 
+        <activity android:name=".WorkActivity" />
+        <activity android:name=".EntertainmentActivity" />
+
         <!-- Widget Receiver -->
         <receiver android:name=".SimpleWidget"
             android:exported="true">

@@ -32,26 +32,30 @@ class SimpleWidgetContent : GlanceAppWidget() {
     private fun MyContent() {
         Column(
             modifier = GlanceModifier.fillMaxSize()
-                .background(GlanceTheme.colors.background),
+                .background(GlanceTheme.colors.background)
+                .padding(16.dp),
             verticalAlignment = Alignment.Top,
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
             Text(
-                text = "¿A dónde quieres dirigirte?",
-                modifier = GlanceModifier.padding(12.dp)
+                text = "Selecciona una opción:",
+                modifier = GlanceModifier.padding(bottom = 16.dp)
             )
-            Row(horizontalAlignment = Alignment.CenterHorizontally) {
+
+            Column(horizontalAlignment = Alignment.CenterHorizontally) {
                 Button(
                     text = "Página Principal",
-                    onClick = actionStartActivity<MainActivity>()
+                    onClick = actionStartActivity<MainActivity>(),
+                    modifier = GlanceModifier.padding(bottom = 8.dp)
                 )
                 Button(
                     text = "Vista Work",
-                    onClick = actionStartActivity<WorkActivity>() // Redirige a WorkActivity
+                    onClick = actionStartActivity<WorkActivity>(),
+                    modifier = GlanceModifier.padding(bottom = 8.dp)
                 )
                 Button(
                     text = "Vista Entertainment",
-                    onClick = actionStartActivity<EntertainmentActivity>() // Redirige a EntertainmentActivity
+                    onClick = actionStartActivity<EntertainmentActivity>()
                 )
             }
         }
