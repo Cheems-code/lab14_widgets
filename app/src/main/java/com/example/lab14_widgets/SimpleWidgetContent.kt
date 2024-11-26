@@ -36,23 +36,22 @@ class SimpleWidgetContent : GlanceAppWidget() {
             verticalAlignment = Alignment.Top,
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
-            Text(text = "¿A dónde quieres dirigirte?", modifier = GlanceModifier.padding(12.dp))
+            Text(
+                text = "¿A dónde quieres dirigirte?",
+                modifier = GlanceModifier.padding(12.dp)
+            )
             Row(horizontalAlignment = Alignment.CenterHorizontally) {
-                // Primer botón para ir a MainActivity
                 Button(
                     text = "Página Principal",
-                    onClick = {
-                        // Acción para abrir MainActivity
-                        actionStartActivity<MainActivity>()
-                    }
+                    onClick = actionStartActivity<MainActivity>()
                 )
-                // Segundo botón para ir a SecondActivity
                 Button(
-                    text = "Segunda Página",
-                    onClick = {
-                        // Acción para abrir SecondActivity
-                        actionStartActivity<SecondActivity>()
-                    }
+                    text = "Vista Work",
+                    onClick = actionStartActivity<WorkActivity>() // Redirige a WorkActivity
+                )
+                Button(
+                    text = "Vista Entertainment",
+                    onClick = actionStartActivity<EntertainmentActivity>() // Redirige a EntertainmentActivity
                 )
             }
         }
